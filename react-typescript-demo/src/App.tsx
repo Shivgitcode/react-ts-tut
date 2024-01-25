@@ -5,7 +5,8 @@ import "./App.css";
 // import PersonList from "./components/PersonList";
 // import { Status } from "./components/Status";
 import Oscar from "./components/Oscar";
-import { Button } from "./components/button";
+// import { Button } from "./components/button";
+import { Container } from "./components/Container";
 import Input from "./components/Input";
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
   //   { first: "shivansh", last: "Aggarwal" },
   // ];
 
+  const styles = { border: "1px solid black", padding: "1rem", color: "red" };
+
   return (
     <div>
       {/* <Greet name="shivansh" messageCount={20} isLoggedIn={true}></Greet>
@@ -39,11 +42,11 @@ function App() {
       <Oscar>
         {/* <Heading>this award goes to cristiano ronaldo </Heading> */}
       </Oscar>
-      <Button
+      {/* <Button
         handleClick={(event) => {
           console.log("you clicked me ", event);
         }}
-      ></Button>
+      ></Button> */}
 
       <Input
         handleChange={(event) => {
@@ -51,6 +54,7 @@ function App() {
         }}
         value=""
       ></Input>
+      <Container styles={styles}></Container>
     </div>
   );
 }
