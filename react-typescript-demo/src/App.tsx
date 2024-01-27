@@ -8,6 +8,8 @@ import Oscar from "./components/Oscar";
 // import { Button } from "./components/button";
 import { Container } from "./components/Container";
 import Input from "./components/Input";
+import { ThemeContextProvider } from "./context/ThemeContext";
+import Box from "./context/Box";
 
 function App() {
   // interface Person {
@@ -55,6 +57,10 @@ function App() {
         value=""
       ></Input>
       <Container styles={styles}></Container>
+
+      <ThemeContextProvider>
+        <Box></Box>
+      </ThemeContextProvider>
     </div>
   );
 }
